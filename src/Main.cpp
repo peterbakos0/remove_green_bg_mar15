@@ -12,7 +12,7 @@ int main()
 {
 	SetConfig();
 
-	RemoveBgFromVid("../../imgs/vid2.mp4", "../../imgs/vid2out.mp4");
+	RemoveBgFromVid(config.inVidPath, config.outVidPath);
 
 	/*Mat frame = imread("../../imgs/frame.png");
 

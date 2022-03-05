@@ -14,7 +14,7 @@ void RemoveBgFromVid(string vidPath, string vidOutPath)
 	VideoCapture vid(vidPath);
 	VideoWriter vidOut(vidOutPath, VideoWriter::fourcc('m','p','4','v'), config.fps, Size(config.width, config.height));
 
-	int doneFrameCount = 20;
+	int doneFrameCount = 0;
 	int totalFrameCount = vid.get(CAP_PROP_FRAME_COUNT);
 
 	Mat frame;
@@ -22,7 +22,7 @@ void RemoveBgFromVid(string vidPath, string vidOutPath)
 
 	while(true)
 	{
-		cout << "\r" << floor((float) doneFrameCount / (float) totalFrameCount * 100.0) << "%" << flush;
+		cout << "\rProcessing video " << vidPath << ": " << floor((float) doneFrameCount / (float) totalFrameCount * 100.0) << "%" << flush;
 
 		vid >> frame;
 
@@ -38,8 +38,8 @@ void RemoveBgFromVid(string vidPath, string vidOutPath)
 		doneFrameCount++;
 	}
 
-	cout << endl;
-
 	vid.release();
 	vidOut.release();
+
+	cout << endl << "Modified video was successfully saved as " << vidOutPath << endl;
 }

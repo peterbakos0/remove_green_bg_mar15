@@ -16,67 +16,74 @@ void SetConfig()
 	while(currentEntry != NULL)
 	{
 		string key = currentEntry->string;
-		int value = currentEntry->valueint;
 
-		if(key == "width")
+		if(key == "inVidPath")
 		{
-			config.width = value;
+			config.inVidPath = currentEntry->valuestring;
+		}
+		else if(key == "outVidPath")
+		{
+			config.outVidPath = currentEntry->valuestring;
+		}
+		else if(key == "width")
+		{
+			config.width = currentEntry->valueint;
 		}
 		else if(key == "height")
 		{
-			config.height = value;
+			config.height = currentEntry->valueint;
 		}
 		else if(key == "fps")
 		{
-			config.fps = value;
+			config.fps = currentEntry->valueint;
 		}
 		else if(key == "minH")
 		{
-			config.minH = value;
+			config.minH = currentEntry->valueint;
 		}
 		else if(key == "maxH")
 		{
-			config.maxH = value;
+			config.maxH = currentEntry->valueint;
 		}
 		else if(key == "minS")
 		{
-			config.minS = value;
+			config.minS = currentEntry->valueint;
 		}
 		else if(key == "maxS")
 		{
-			config.maxS = value;
+			config.maxS = currentEntry->valueint;
 		}
 		else if(key == "minV")
 		{
-			config.minV = value;
+			config.minV = currentEntry->valueint;
 		}
 		else if(key == "maxV")
 		{
-			config.maxV = value;
+			config.maxV = currentEntry->valueint;
 		}
 		else if(key == "newR")
 		{
-			config.newR = value;
+			config.newR = currentEntry->valueint;
 		}
 		else if(key == "newG")
 		{
-			config.newG = value;
+			config.newG = currentEntry->valueint;
 		}
 		else if(key == "newB")
 		{
-			config.newB = value;
+			config.newB = currentEntry->valueint;
 		}
 		else if(key == "kokarda")
 		{
-			config.kokarda = value;
+			config.kokarda = currentEntry->valueint;
 		}
 		else if(key == "simplify")
 		{
-			config.simplify = value;
+			config.simplify = currentEntry->valueint;
 		}
 		else if(key == "blur")
 		{
-			config.blur = value;
+			config.blur = currentEntry->valueint;
 		}
 
 		currentEntry = currentEntry->next;

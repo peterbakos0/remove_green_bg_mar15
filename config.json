@@ -1,4 +1,6 @@
 {
+	"inVidPath": "/home/peter/Stuff/School/Irodalom/Marcius15Unnepseg/proj/imgs/vid.mp4",
+	"outVidPath": "/home/peter/Stuff/School/Irodalom/Marcius15Unnepseg/proj/imgs/vidout2.mp4",
 	"width": 1920,
 	"height": 1080,
 	"fps": 30,
