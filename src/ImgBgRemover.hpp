@@ -1,5 +1,5 @@
-#ifndef REMOVEBGFROMIMG_HPP
-#define REMOVEBGFROMIMG_HPP
+#ifndef IMGBGREMOVER_HPP
+#define IMGBGREMOVER_HPP
 
 #include <vector>
 #include <opencv2/opencv.hpp>

@@ -82,7 +82,14 @@ void ImgBgRemover::RemoveBgFromImg(Mat img)
 
 bool ImgBgRemover::CheckPix(int x, int y)
 {
-	return (CheckPixBasic(x, y) && (CheckPixBasic(x - config.kokarda, y) || CheckPixBasic(x + config.kokarda, y)));
+	return (
+		CheckPixBasic(x, y) && (
+			CheckPixBasic(x - config.kokarda, y) ||
+			CheckPixBasic(x + config.kokarda, y) ||
+			CheckPixBasic(x, y - config.kokarda) ||
+			CheckPixBasic(x, y + config.kokarda)
+		)
+	);
 }
 
 bool ImgBgRemover::CheckPixBasic(int x, int y)
