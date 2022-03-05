@@ -1,0 +1,17 @@
+{
+	"width": 1920,
+	"height": 1080,
+	"fps": 30,
+	"minH": 35,
+	"maxH": 185,
+	"minS": 0,
+	"maxS": 35,
+	"minV": 35,
+	"maxV": 85,
+	"newR": 0,
+	"newG": 255,
+	"newB": 0,
+	"kokarda": 60,
+	"simplify": 10,
+	"blur": 5
+}
