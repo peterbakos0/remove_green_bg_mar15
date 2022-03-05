@@ -11,6 +11,8 @@ using namespace cv;
 
 void RemoveBgFromVid(string vidPath, string vidOutPath)
 {
+	cout << vidPath << " => " << vidOutPath << endl;
+
 	VideoCapture vid(vidPath);
 	VideoWriter vidOut(vidOutPath, VideoWriter::fourcc('m','p','4','v'), config.fps, Size(config.width, config.height));
 
@@ -22,7 +24,7 @@ void RemoveBgFromVid(string vidPath, string vidOutPath)
 
 	while(true)
 	{
-		cout << "\rProcessing video " << vidPath << ": " << floor((float) doneFrameCount / (float) totalFrameCount * 100.0) << "%" << flush;
+		cout << "\rProgress: " << floor((float) doneFrameCount / (float) totalFrameCount * 100.0) << "%" << flush;
 
 		vid >> frame;
 
@@ -41,5 +43,5 @@ void RemoveBgFromVid(string vidPath, string vidOutPath)
 	vid.release();
 	vidOut.release();
 
-	cout << endl << "Modified video was successfully saved as " << vidOutPath << endl;
+	cout << endl << "DONE!" << endl;
 }
