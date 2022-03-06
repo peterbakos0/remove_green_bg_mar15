@@ -1,9 +1,9 @@
 #include <opencv2/opencv.hpp>
 #include "Config.hpp"
 #include "SetConfig.hpp"
-#include "RemoveBgFromImg.hpp"
 #include "RemoveBgFromVid.hpp"
 #include "RemoveBgInDir.hpp"
+#include "InitDevMode.hpp"
 
 using namespace cv;
 
@@ -23,12 +23,7 @@ int main()
 	}
 	else if(config.mode == "dev")
 	{
-		Mat img = imread(config.inPath);
-
-		Mat imgOut = RemoveBgFromImg(img);
-
-		imshow("img", imgOut);
-		waitKey(0);
+		InitDevMode();
 	}
 
 	return 0;
