@@ -1,0 +1,17 @@
+{
+	"mode": "dir",
+	"inPath": "",
+	"outPath": "",
+	"width": 1920,
+	"height": 1080,
+	"fps": 30,
+	"minH": 30,
+	"minS": 35,
+	"minV": 0,
+	"maxH": 120,
+	"maxS": 255,
+	"maxV": 255,
+	"newR": 0,
+	"newG": 255,
+	"newB": 0
+}
