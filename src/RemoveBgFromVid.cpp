@@ -1,4 +1,5 @@
 #include <string>
+#include <ctime>
 #include <cmath>
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -42,5 +43,15 @@ void RemoveBgFromVid(string vidPath, string vidOutPath)
 	vid.release();
 	vidOut.release();
 
-	cout << endl << "DONE!" << endl;
+	cout << endl << "Merging audio" << endl;
+
+	string tmpAudVidOutPath = "/tmp/" + to_string(time(0)) + "_TMPAUDVID.mp4";
+
+	string mergeAudCmd = "ffmpeg -loglevel quiet -i " + vidOutPath + " -i " + vidPath + " -c copy -map 0:v:0 -map 1:a:0 " + tmpAudVidOutPath;
+	system(mergeAudCmd.c_str());
+
+	string cleanUpCmd = "rm " + vidOutPath + " && mv " + tmpAudVidOutPath + " " + vidOutPath;
+	system(cleanUpCmd.c_str());
+
+	cout << "DONE!" << endl;
 }
