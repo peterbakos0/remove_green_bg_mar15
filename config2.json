@@ -1,0 +1,16 @@
+{
+	"inVidPath": "../../imgs/vid3.mp4",
+	"outVidPath": "../../imgs/vid3out.mp4",
+	"width": 1920,
+	"height": 1080,
+	"fps": 30,
+	"minH": 31,
+	"minS": 15,
+	"minV": 0,
+	"maxH": 90,
+	"maxS": 255,
+	"maxV": 255,
+	"newR": 0,
+	"newG": 255,
+	"newB": 0
+}
