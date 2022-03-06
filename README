@@ -1,2 +1,21 @@
 REMOVE GREEN BG MAR15
 Removes the bg from shots taken for the mar15 film.
+
+How to use:
+	Put a config.json file to the repo root
+		1. Copy one from the configs dir, rename and edit it
+			- config1.json: use for grey bg
+			- config2.json: use for green bg
+		2. Write one yourself
+	$ cd scripts
+	$ ./build.sh
+	$ ./run.sh
+
+How to build:
+	Debian GNU/Linux:
+		$ sudo apt update
+		$ sudo apt upgrade
+		$ sudo apt install g++ make libopencv-dev libcjson-dev
+		Clone the repo
+		$ cd remove_green_bg_mar15/scripts
+		$ ./rebuild.sh
