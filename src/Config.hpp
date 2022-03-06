@@ -5,8 +5,9 @@
 
 struct Config
 {
-	std::string inVidPath;
-	std::string outVidPath;
+	std::string mode;
+	std::string inPath;
+	std::string outPath;
 	int width;
 	int height;
 	int fps;

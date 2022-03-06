@@ -17,13 +17,17 @@ void SetConfig()
 	{
 		string key = currentEntry->string;
 
-		if(key == "inVidPath")
+		if(key == "mode")
 		{
-			config.inVidPath = currentEntry->valuestring;
+			config.mode = currentEntry->valuestring;
 		}
-		else if(key == "outVidPath")
+		else if(key == "inPath")
 		{
-			config.outVidPath = currentEntry->valuestring;
+			config.inPath = currentEntry->valuestring;
+		}
+		else if(key == "outPath")
+		{
+			config.outPath = currentEntry->valuestring;
 		}
 		else if(key == "width")
 		{

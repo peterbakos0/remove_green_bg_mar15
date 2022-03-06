@@ -3,6 +3,7 @@
 #include "SetConfig.hpp"
 #include "RemoveBgFromImg.hpp"
 #include "RemoveBgFromVid.hpp"
+#include "RemoveBgInDir.hpp"
 
 using namespace cv;
 
@@ -12,16 +13,23 @@ int main()
 {
 	SetConfig();
 
-	RemoveBgFromVid(config.inVidPath, config.outVidPath);
+	if(config.mode == "dir")
+	{
+		RemoveBgInDir(config.inPath, config.outPath);
+	}
+	else if(config.mode == "vid")
+	{
+		RemoveBgFromVid(config.inPath, config.outPath);
+	}
+	else if(config.mode == "dev")
+	{
+		Mat img = imread(config.inPath);
 
-	/*
-	Mat frame = imread("../../imgs/whatever.png");
+		Mat imgOut = RemoveBgFromImg(img);
 
-	Mat frameOut = RemoveBgFromImg(frame);
-
-	imshow("frame", frameOut);
-	waitKey(0);
-	*/
+		imshow("img", img);
+		waitKey(0);
+	}
 
 	return 0;
 }
