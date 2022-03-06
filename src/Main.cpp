@@ -27,7 +27,7 @@ int main()
 
 		Mat imgOut = RemoveBgFromImg(img);
 
-		imshow("img", img);
+		imshow("img", imgOut);
 		waitKey(0);
 	}
 
