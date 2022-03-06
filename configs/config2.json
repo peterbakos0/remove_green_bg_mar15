@@ -1,6 +1,7 @@
 {
-	"inVidPath": "../../imgs/vid3.mp4",
-	"outVidPath": "../../imgs/vid3out.mp4",
+	"mode": "dir",
+	"inPath": "",
+	"outPath": "",
 	"width": 1920,
 	"height": 1080,
 	"fps": 30,
