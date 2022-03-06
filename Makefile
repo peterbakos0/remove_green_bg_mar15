@@ -9,7 +9,7 @@ CJSON_LDLIBS=`pkg-config --libs libcjson`
 OPENCV_CXXFLAGS=`pkg-config --cflags opencv4`
 OPENCV_LDLIBS=`pkg-config --libs opencv4`
 
-CXXFLAGS=-Wall $(CJSON_CXXFLAGS) $(OPENCV_CXXFLAGS)
+CXXFLAGS=-O3 -Wall $(CJSON_CXXFLAGS) $(OPENCV_CXXFLAGS)
 LDLIBS=$(CJSON_LDLIBS) $(OPENCV_LDLIBS)
 
 SRC_DIR=src

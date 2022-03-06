@@ -3,7 +3,7 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 #include "Config.hpp"
-#include "ImgBgRemover.hpp"
+#include "RemoveBgFromImg.hpp"
 #include "RemoveBgFromVid.hpp"
 
 using namespace std;
@@ -20,7 +20,6 @@ void RemoveBgFromVid(string vidPath, string vidOutPath)
 	int totalFrameCount = vid.get(CAP_PROP_FRAME_COUNT);
 
 	Mat frame;
-	ImgBgRemover* remover = new ImgBgRemover();
 
 	while(true)
 	{
@@ -33,9 +32,9 @@ void RemoveBgFromVid(string vidPath, string vidOutPath)
 			break;
 		}
 
-		remover->RemoveBgFromImg(frame);
+		Mat frameOut = RemoveBgFromImg(frame);
 
-		vidOut.write(remover->imgOut);
+		vidOut.write(frameOut);
 
 		doneFrameCount++;
 	}

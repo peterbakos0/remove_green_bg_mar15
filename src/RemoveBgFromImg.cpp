@@ -3,7 +3,7 @@
 
 using namespace cv;
 
-Mat RemoveBgFromImg3(Mat img)
+Mat RemoveBgFromImg(Mat img)
 {
 	Mat imgOut = Mat(Size(config.width, config.height), CV_8UC3, Scalar(config.newB, config.newG, config.newR));
 
