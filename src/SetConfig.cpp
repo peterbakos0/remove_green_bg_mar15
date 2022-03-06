@@ -73,18 +73,6 @@ void SetConfig()
 		{
 			config.newB = currentEntry->valueint;
 		}
-		else if(key == "kokarda")
-		{
-			config.kokarda = currentEntry->valueint;
-		}
-		else if(key == "simplify")
-		{
-			config.simplify = currentEntry->valueint;
-		}
-		else if(key == "blur")
-		{
-			config.blur = currentEntry->valueint;
-		}
 
 		currentEntry = currentEntry->next;
 	}

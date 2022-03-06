@@ -19,9 +19,6 @@ struct Config
 	int newR;
 	int newG;
 	int newB;
-	int kokarda;
-	int simplify;
-	int blur;
 };
 
 extern Config config;

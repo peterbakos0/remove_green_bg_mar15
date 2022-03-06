@@ -4,6 +4,7 @@
 #include "SetConfig.hpp"
 #include "ImgBgRemover.hpp"
 #include "RemoveBgFromImg2.hpp"
+#include "RemoveBgFromImg3.hpp"
 #include "RemoveBgFromVid.hpp"
 
 using namespace cv;
@@ -18,20 +19,24 @@ int main()
 
 	Mat frame = imread("../../imgs/whatever.png");
 
-	rlimit re;
+	/*rlimit re;
 	getrlimit(RLIMIT_STACK, &re);
 
 	re.rlim_cur = re.rlim_max;
 
-	setrlimit(RLIMIT_STACK, &re);
+	setrlimit(RLIMIT_STACK, &re);*/
 
-	RemoveBgFromImg2(&frame);
+	//RemoveBgFromImg2(&frame);
 
 	//ImgBgRemover* remover = new ImgBgRemover();
 	//remover->RemoveBgFromImg(frame);
 
 	//imshow("frame", remover->imgOut);
-	imshow("frame", frame);
+
+	Mat outframe = RemoveBgFromImg3(frame);
+
+
+	imshow("frame", outframe);
 	waitKey(0);
 
 	return 0;

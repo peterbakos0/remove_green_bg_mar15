@@ -4,16 +4,13 @@
 	"width": 1920,
 	"height": 1080,
 	"fps": 30,
-	"minH": 35,
-	"maxH": 210,
-	"minS": 0,
-	"maxS": 35,
-	"minV": 30,
-	"maxV": 85,
+	"minH": 20,
+	"minS": 4,
+	"minV": 5,
+	"maxH": 105,
+	"maxS": 255,
+	"maxV": 255,
 	"newR": 0,
 	"newG": 255,
-	"newB": 0,
-	"kokarda": 70,
-	"simplify": 10,
-	"blur": 5
+	"newB": 0
 }
